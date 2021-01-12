@@ -1,0 +1,29 @@
+ALGORITHM algorithm_checkpoint
+VAR
+    count_words: INTEGER :=0
+    count_space: INTEGER :=0
+    count_vowels: INTEGER :=0
+    i: INTEGER
+    l:INTEGER
+    phrase: STRING :="good morning."
+BEGIN
+    // length of the phrase
+     l = Len(phrase)
+     write(l)
+    // number of words
+     FOR i FROM 0 TO (Len(phrase)-1) DO
+         IF (phrase[i] =" ") THEN
+             count_space := count_space +1
+             count_words := count_words + count_space
+         END_IF
+         write(count_words)
+     END_FOR
+    // number of vowels
+    FOR i FROM 0 TO (Len(phrase)-1) DO
+         IF (phrase[i]='a' or phrase[i]='e' or phrase[i]='i' or phrase[i]='o' or phrase[i]='u' or phrase[i]='y') THEN
+             count_vowels := count_vowels +1
+         END_IF
+         write(count_vowels)
+     END_FOR
+    
+END
